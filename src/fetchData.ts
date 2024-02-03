@@ -6,4 +6,12 @@
  */
 
 // 請在下方寫下你的程式碼
-
+export async function fetchData(html: string) {
+  try {
+    const response = await fetch(html);
+    const data = await response.json();
+    return data;
+  } catch (e) {
+    return e;
+  }
+}
