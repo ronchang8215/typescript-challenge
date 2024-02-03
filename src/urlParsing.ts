@@ -2,7 +2,7 @@
  * 任務：實作一個函式 `parseUrl`，嘗試用 URL 方法，解析網址並 return 其組成部分。
  *
  * 範例：
- * parseUrl('https://www.example.com/path') 應該回傳 
+ * parseUrl('https://www.example.com/path') 應該回傳
  * {
  *   protocol: 'https:',
  *   hostname: 'www.example.com',
@@ -19,10 +19,10 @@ interface UrlParts {
 }
 
 export function parseUrl(url: string): UrlParts {
-    // 請在此處寫下你的程式碼
-    return {
-        protocol: url.substring(0, url.indexOf("//")),
-        hostname: url.substring(url.indexOf("//")+2, url.indexOf("m/") +1),
-        path:url.substring(url.indexOf("m/")+1)
-    }
+  // 請在此處寫下你的程式碼
+  return {
+    protocol: `${url.split("/")[0]}`,
+    hostname: `${url.split("/")[2]}`,
+    path: `/${url.split("/")[3]}`,
+  };
 }
