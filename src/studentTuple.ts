@@ -7,9 +7,17 @@
  * 輸出: 'Alice: 85%'
  */
 
-type student = string|number
+type student = string | number;
 
-export function printStudentInfo(student:student[]) {
-    // 在此實現函式
-    return student.map((item) => { if (typeof item === 'number') { return item + '%' } else { return item+':' } }).join(' ');
+export function printStudentInfo(student: student[]) {
+  // 在此實現函式
+  return student
+    .map((item) => {
+      if (typeof item === "number") {
+        return item + "%";
+      } else {
+        return item + ":";
+      }
+    })
+    .join(" ");
 }

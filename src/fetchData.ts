@@ -6,10 +6,19 @@
  */
 
 // 請在下方寫下你的程式碼
-export async function fetchData(html: string) {
+// export async function fetchData(html: string) {
+//   try {
+//     const response = await fetch(html);
+//     const data = await response.json();
+//     return data;
+//   } catch (e) {
+//     return e;
+//   }
+// }
+export async function fetchData(url: string) {
   try {
-    const response = await fetch(html);
-    const data = await response.json();
+    const res = await fetch(url);
+    const data = await res.json();
     return data;
   } catch (e) {
     return e;
